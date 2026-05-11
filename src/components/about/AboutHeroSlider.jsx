@@ -2,9 +2,10 @@
 import BaseSlider from '../common/BaseSlider'
 
 const images = [
-  'https://upload.wikimedia.org/wikipedia/commons/0/06/Artisanal_gold_Dodoma001.jpg',
-  'https://upload.wikimedia.org/wikipedia/commons/e/ea/Coal_miner_spraying_rock_dust.jpg',
-  'https://upload.wikimedia.org/wikipedia/commons/9/9c/Caterpillar_Highwall_Mine_HW300.jpg',
+  '/images/about-preview-2 (1).JPG',
+  '/images/about-preview-2 (2).JPG',
+  '/images/about-preview-2 (3).JPG',
+  '/images/about-preview-2 (4).JPG',
 ]
 
 export default function AboutHeroSlider() {

@@ -35,9 +35,12 @@ export default function AboutHero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="hidden lg:block relative"
+            className="absolute inset-0 lg:relative lg:block"
           >
-            <AboutHeroSlider />
+            <div className="absolute inset-0 lg:hidden bg-charcoal/60 z-10" />
+            <div className="h-full opacity-30 lg:opacity-100 transition-opacity duration-700">
+              <AboutHeroSlider />
+            </div>
           </motion.div>
         </div>
       </motion.div>

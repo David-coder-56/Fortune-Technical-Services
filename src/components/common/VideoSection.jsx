@@ -60,16 +60,12 @@ export default function VideoSection({ title, subtitle, thumbnail }) {
               onClick={(e) => e.stopPropagation()}
               className="w-full max-w-6xl aspect-video bg-black rounded-lg overflow-hidden border border-steel-dark/60 shadow-2xl shadow-black/50"
             >
-              {/* Using a placeholder YouTube video embed */}
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                title="Company Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <video
+                src="/videos/VIDEO-2026-05-10-15-10-2.mp4"
+                className="w-full h-full object-contain"
+                controls
+                autoPlay
+              ></video>
             </motion.div>
           </motion.div>
         )}

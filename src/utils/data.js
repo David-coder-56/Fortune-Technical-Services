@@ -115,6 +115,7 @@ export const projects = [
       "Comprehensive mineral exploration program covering 12,000 hectares with 48 drill holes totaling 18,500 meters of core recovery.",
     tags: ["Iron Ore", "Core Drilling", "Resource Estimation"],
     image: "mining",
+    imgUrl: "/images/Home-hero (1).JPG",
   },
   {
     id: 2,
@@ -146,6 +147,7 @@ export const projects = [
       "Community water development program delivering 24 productive boreholes across 12 rural communities, providing clean water access to 18,000 residents.",
     tags: ["Water Wells", "Rotary Drilling", "Community Development"],
     image: "drilling",
+    imgUrl: "/images/Home-hero (2).JPG",
   },
   {
     id: 4,
@@ -161,6 +163,7 @@ export const projects = [
       "18km heavy-haul road construction and rehabilitation for ore transport corridor, designed to carry 200-ton articulated haulers at full payload.",
     tags: ["Road Construction", "Earthworks", "Civil Engineering"],
     image: "civil",
+    imgUrl: "/images/about-preview (1).jpg",
   },
   {
     id: 5,
@@ -176,6 +179,7 @@ export const projects = [
       "Reverse circulation and diamond core drilling program testing gold mineralization along a 4.2km structural corridor identified through geophysical interpretation.",
     tags: ["Gold Exploration", "RC Drilling", "Diamond Core"],
     image: "drilling",
+    imgUrl: "/images/Home-hero (3).JPG",
   },
   {
     id: 6,
@@ -191,6 +195,7 @@ export const projects = [
       "Full mine infrastructure support including pit dewatering, haul road maintenance, drill and blast services, and environmental monitoring.",
     tags: ["Mine Support", "Dewatering", "Blasting"],
     image: "mining",
+    imgUrl: "/images/about-preview (2).JPG",
   },
   {
     id: 7,
