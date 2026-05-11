@@ -324,9 +324,8 @@ export const filterCategories = [
 ];
 
 export const contactInfo = {
-  address: "14 Tubman Boulevard, Sinkor, Monrovia, Liberia",
-  phone: "+231 (0) 776 123 456",
-  emergency: "+231 (0) 886 999 911",
-  email: "info@fortunetechnical.lr",
+  address: "BY MOTHER & CHILD CLINIC, CALDWELL NEW GEORGIA JUNCTION, MONROVIA. LIBERIA.",
+  phones: ["+231 886 519 459", "+231 777 020 770"],
+  emails: ["jennehfti@gmail.com", "fortunetechnicalservicesinc@outlook.com"],
   hours: "Mon–Fri: 08:00–18:00 | Emergency: 24/7",
 };

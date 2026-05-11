@@ -60,7 +60,8 @@ function ContactForm() {
     setStatus("loading");
 
     try {
-      const response = await fetch("https://formspree.io/f/your-form-id", {
+      // REPLACE 'your-form-id' with your actual Formspree ID
+      const response = await fetch("https://formspree.io/f/mqaebrda", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -327,21 +328,26 @@ export default function Contact() {
                   {
                     icon: Phone,
                     label: "Main Office",
-                    value: contactInfo.phone,
-                    href: `tel:${contactInfo.phone}`,
+                    value: contactInfo.phones[0],
+                    href: `tel:${contactInfo.phones[0]}`,
                   },
                   {
                     icon: Phone,
-                    label: "24/7 Emergency Line",
-                    value: contactInfo.emergency,
-                    href: `tel:${contactInfo.emergency}`,
-                    accent: true,
+                    label: "Alternative Line",
+                    value: contactInfo.phones[1],
+                    href: `tel:${contactInfo.phones[1]}`,
                   },
                   {
                     icon: Mail,
-                    label: "Email",
-                    value: contactInfo.email,
-                    href: `mailto:${contactInfo.email}`,
+                    label: "Primary Email",
+                    value: contactInfo.emails[0],
+                    href: `mailto:${contactInfo.emails[0]}`,
+                  },
+                  {
+                    icon: Mail,
+                    label: "Secondary Email",
+                    value: contactInfo.emails[1],
+                    href: `mailto:${contactInfo.emails[1]}`,
                   },
                   {
                     icon: MapPin,
@@ -430,8 +436,8 @@ export default function Contact() {
         <div className="absolute inset-0 grid-line opacity-30" />
         <div className="text-center relative z-10">
           <MapPin size={32} className="text-gold mx-auto mb-3" />
-          <p className="font-mono text-slate/40 text-xs uppercase tracking-widest">
-            14 Tubman Blvd, Sinkor, Monrovia, Liberia
+          <p className="font-mono text-slate/40 text-xs uppercase tracking-widest px-4">
+            {contactInfo.address}
           </p>
           <a
             href="https://maps.google.com?q=Monrovia+Liberia"

@@ -52,13 +52,13 @@ export default function Footer() {
               West Africa's premier mining and drilling services company. Delivering precision engineering since 2006.
             </p>
             <div className="space-y-3">
-              <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-3 text-slate/50 hover:text-gold transition-colors text-sm group">
+              <a href={`tel:${contactInfo.phones[0]}`} className="flex items-center gap-3 text-slate/50 hover:text-gold transition-colors text-sm group">
                 <Phone size={14} className="text-gold" />
-                {contactInfo.phone}
+                {contactInfo.phones[0]}
               </a>
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 text-slate/50 hover:text-gold transition-colors text-sm">
+              <a href={`mailto:${contactInfo.emails[0]}`} className="flex items-center gap-3 text-slate/50 hover:text-gold transition-colors text-sm">
                 <Mail size={14} className="text-gold" />
-                {contactInfo.email}
+                {contactInfo.emails[0]}
               </a>
               <div className="flex items-start gap-3 text-slate/50 text-sm">
                 <MapPin size={14} className="text-gold mt-0.5 shrink-0" />
