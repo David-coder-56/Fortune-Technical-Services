@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-charcoal text-slate font-body overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-gold text-navy;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold text-navy font-heading font-bold uppercase tracking-widest px-8 py-4 text-sm transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-gold text-gold font-heading font-bold uppercase tracking-widest px-8 py-4 text-sm transition-all duration-300 hover:bg-gold hover:text-navy active:scale-95;
+  }
+
+  .section-label {
+    @apply font-mono text-gold text-xs uppercase tracking-[0.3em] mb-4 flex items-center gap-3;
+  }
+
+  .section-label::before {
+    content: "";
+    @apply block w-8 h-px bg-gold;
+  }
+
+  .card-dark {
+    @apply bg-navy border border-steel-dark hover:border-gold transition-all duration-500;
+  }
+
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px;
+    pointer-events: none;
+  }
+
+  .text-display {
+    @apply font-display font-black uppercase leading-none tracking-tight;
+  }
+
+  .text-heading {
+    @apply font-heading font-bold uppercase tracking-wide;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-gold-light;
+  }
+
+  .glass {
+    @apply bg-navy/40 backdrop-blur-md border border-white/10;
+  }
+
+  .grid-line {
+    background-image:
+      linear-gradient(to right, rgba(75, 85, 99, 0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(75, 85, 99, 0.15) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+/* Floating label inputs */
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(75, 85, 99, 0.6);
+  color: #f8fafc;
+  padding: 1.25rem 1rem 0.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  outline: none;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #f59e0b;
+}
+
+.form-group label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: 0.3rem;
+  font-size: 0.7rem;
+  color: #f59e0b;
+  letter-spacing: 0.05em;
+}
+
+/* Ticker animation */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  animation: ticker 30s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Count up animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax utility */
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Glow effects */
+.glow-gold {
+  box-shadow: 0 0 40px rgba(245, 158, 11, 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 40px rgba(245, 158, 11, 0.5);
+}
+
+/* Custom cursor */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(245, 158, 11, 0.6);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition:
+    transform 0.15s ease,
+    width 0.3s ease,
+    height 0.3s ease;
+}
